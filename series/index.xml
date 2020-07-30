@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on Pure theme for Hugo</title>
+    <link>https://loardforwin.github.io/series/</link>
+    <description>Recent content in Series on Pure theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+        <atom:link href="https://loardforwin.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Myfirst</title>
+      <link>https://loardforwin.github.io/2020/07/myfirst/</link>
+      <pubDate>Thu, 30 Jul 2020 15:09:03 +0800</pubDate>
+      
+      <guid>https://loardforwin.github.io/2020/07/myfirst/</guid>
+      <description>我的第一篇博客 hugo new post/FileName.md hugo server -t pure &amp;ndash;buildDrafts //测试静态博客 cd daydream hugo server -t pure &amp;ndash;buildDrafts hugo &amp;ndash;theme=pure &amp;ndash;baseUrl=&amp;quot;https://loardforwin.github.io&amp;rdquo; &amp;ndash;buildDrafts cd public git add . git commit -m &amp;ldquo;这是我的博客&amp;rdquo; cd.. git remote add origin https://github.com/loardforwin/loardforwin.github.io.git git push</description>
+    </item>
+    
+  </channel>
+</rss>
