@@ -12,10 +12,10 @@
     
     <item>
       <title>Myfirst</title>
-      <link>https://loardforwin.github.io/2020/07/myfirst/</link>
+      <link>https://loardforwin.github.io/2020/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E5%8D%9A%E5%AE%A2%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Thu, 30 Jul 2020 15:09:03 +0800</pubDate>
       
-      <guid>https://loardforwin.github.io/2020/07/myfirst/</guid>
+      <guid>https://loardforwin.github.io/2020/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E5%8D%9A%E5%AE%A2%E5%91%BD%E4%BB%A4/</guid>
       <description>我的第一篇博客——博客命令 1.创建博客 1.hugo new post/FileName.md 2.hugo server -t pure &amp;ndash;buildDrafts //测试静态博客 3.cd daydream 4.hugo server -t pure &amp;ndash;buildDrafts 5.hugo &amp;ndash;theme=pure &amp;ndash;baseUrl=&amp;quot;https://loardforwin.github.io&amp;rdquo; &amp;ndash;buildDrafts 6.cd public 7.git add . 8.git commit -m &amp;ldquo;这是我的博客&amp;rd</description>
     </item>
     
