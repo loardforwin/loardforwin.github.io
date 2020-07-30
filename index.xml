@@ -16,7 +16,7 @@
       <pubDate>Thu, 30 Jul 2020 15:09:03 +0800</pubDate>
       
       <guid>https://loardforwin.github.io/2020/07/myfirst/</guid>
-      <description>我的第一篇博客 hugo new post/FileName.md hugo server -t pure &amp;ndash;buildDrafts //测试静态博客 cd daydream hugo server -t pure &amp;ndash;buildDrafts hugo &amp;ndash;theme=pure &amp;ndash;baseUrl=&amp;quot;https://loardforwin.github.io&amp;rdquo; &amp;ndash;buildDrafts cd public git add . git commit -m &amp;ldquo;这是我的博客&amp;rdquo; cd.. git remote add origin https://github.com/loardforwin/loardforwin.github.io.git git push</description>
+      <description>我的第一篇博客 1.hugo new post/FileName.md 2.hugo server -t pure &amp;ndash;buildDrafts //测试静态博客 3.cd daydream 4.hugo server -t pure &amp;ndash;buildDrafts 5.hugo &amp;ndash;theme=pure &amp;ndash;baseUrl=&amp;quot;https://loardforwin.github.io&amp;rdquo; &amp;ndash;buildDrafts 6.cd public 7.git add . 8.git commit -m &amp;ldquo;这是我的博客&amp;rdquo; 9.cd.. 10.git remote add origin https://github.com/loardforwin/loardforwin.github.io.git 11.git push</description>
     </item>
     
   </channel>
