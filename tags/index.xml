@@ -5,10 +5,37 @@
     <link>https://loardforwin.github.io/tags/</link>
     <description>Recent content in Tags on Loardforwin&#39;s Technology Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 30 Jul 2020 15:09:03 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2020 20:37:31 +0800</lastBuildDate>
     
         <atom:link href="https://loardforwin.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>类的加载器ClassLoader</title>
+      <link>https://loardforwin.github.io/2020/08/%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E5%99%A8-classloader/</link>
+      <pubDate>Sat, 01 Aug 2020 20:37:31 +0800</pubDate>
+      
+      <guid>https://loardforwin.github.io/2020/08/%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E5%99%A8-classloader/</guid>
+      <description>类的加载器 ClassLoader ——————运行class，加载到内存，方法区 加载器用IO流对象将class文件加载到内存 三个加载器都是CLassLoader的</description>
+    </item>
+    
+    <item>
+      <title>反射</title>
+      <link>https://loardforwin.github.io/2020/08/%E5%8F%8D%E5%B0%84/</link>
+      <pubDate>Sat, 01 Aug 2020 20:35:57 +0800</pubDate>
+      
+      <guid>https://loardforwin.github.io/2020/08/%E5%8F%8D%E5%B0%84/</guid>
+      <description>反射（Reflect） 反射关键对象：class文件对象 类加载器创建，获取使用 三种方法： ​ 1：对象的方法getClass()获取（getCla</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://loardforwin.github.io/about/</link>
+      <pubDate>Thu, 30 Jul 2020 23:01:58 +0800</pubDate>
+      
+      <guid>https://loardforwin.github.io/about/</guid>
+      <description>为了博客的美观只好将博客主界面的作者信息给抹去了orz 这里补充相关信息： 主题名：pure(hugo 的主题) 作者：xiaoheiAh 作者git</description>
+    </item>
     
     <item>
       <title>我的第一篇博客——博客相关命令</title>
@@ -17,15 +44,6 @@
       
       <guid>https://loardforwin.github.io/2020/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E5%8D%9A%E5%AE%A2%E5%91%BD%E4%BB%A4/</guid>
       <description>我的第一篇博客——博客相关命令 1.创建博客 1.hugo new posts/FileName.md 2.hugo server -t pure &amp;ndash;buildDrafts //测试静态博客 3.cd daydream 4.hugo server -t pure &amp;ndash;buildDrafts 5.hugo &amp;ndash;theme=pure &amp;ndash;baseUrl=&amp;quot;https://loardforwin.github.io&amp;rdquo; &amp;ndash;buildDrafts 6.cd public 7.git add . 8.git commit -m &amp;ldquo;这是我的博客&amp;</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://loardforwin.github.io/about/</link>
-      <pubDate>Thu, 30 Apr 2020 23:01:58 +0800</pubDate>
-      
-      <guid>https://loardforwin.github.io/about/</guid>
-      <description></description>
     </item>
     
   </channel>
