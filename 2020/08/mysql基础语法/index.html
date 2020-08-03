@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <title>
+        MySQL基础语法 - Loardforwin&#39;s Technology Blog
+      </title>
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    
+    <meta name="theme-color" content="#000000" />
+    
+    <meta http-equiv="window-target" content="_top" />
+    
+    
+    <meta name="description" content="1.创建表(create) /* 创建数据表: 关键字 create table 格式: create table 表名( 列名1 数据类型[长度] [约束], 列名2 数据类型[长度] [约束], 列名3 数据" />
+    <meta name="generator" content="Hugo 0.74.3 with theme pure" />
+    <title>MySQL基础语法 - Loardforwin&#39;s Technology Blog</title>
+    
+    
+    <link rel="stylesheet" href="https://loardforwin.github.io/css/style.min.c4bc7071f132c964c2116bca53b392933f377e5ca7b7051ed245187c621a2d3e.css">
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" async>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
+    <meta property="og:title" content="MySQL基础语法" />
+<meta property="og:description" content="1.创建表(create) /* 创建数据表: 关键字 create table 格式: create table 表名( 列名1 数据类型[长度] [约束], 列名2 数据类型[长度] [约束], 列名3 数据" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://loardforwin.github.io/2020/08/mysql%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" />
+<meta property="article:published_time" content="2020-08-03T18:13:21+08:00" />
+<meta property="article:modified_time" content="2020-08-03T18:13:21+08:00" />
+<meta itemprop="name" content="MySQL基础语法">
+<meta itemprop="description" content="1.创建表(create) /* 创建数据表: 关键字 create table 格式: create table 表名( 列名1 数据类型[长度] [约束], 列名2 数据类型[长度] [约束], 列名3 数据">
+<meta itemprop="datePublished" content="2020-08-03T18:13:21+08:00" />
+<meta itemprop="dateModified" content="2020-08-03T18:13:21+08:00" />
+<meta itemprop="wordCount" content="5140">
+
+
+
+<meta itemprop="keywords" content="随笔,学习小结," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="MySQL基础语法"/>
+<meta name="twitter:description" content="1.创建表(create) /* 创建数据表: 关键字 create table 格式: create table 表名( 列名1 数据类型[长度] [约束], 列名2 数据类型[长度] [约束], 列名3 数据"/>
+
+    <!--[if lte IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+      <![endif]-->
+
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      <![endif]-->
+
+  </head>
+
+  
+  
+
+  <body class="main-center theme-grey" itemscope itemtype="http://schema.org/WebPage"><header class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <div class="slimContent">
+      <div class="navbar-header">
+        <div class="profile-block text-center">
+          <a id="avatar" href="https://github.com/loardforwin" target="_blank">
+            <img class="img-circle img-rotate" src="https://loardforwin.github.io/avatar.png" width="200" height="200">
+          </a>
+          <h2 id="name" class="hidden-xs hidden-sm">Loardforwin</h2>
+          <h3 id="title" class="hidden-xs hidden-sm hidden-md"></h3>
+          <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i>China</small>
+        </div><div class="search" id="search-form-wrap">
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i
+                        class="icon icon-search"></i></button>
+            </span>
+        </div>
+        <div class="ins-search">
+            <div class="ins-search-mask"></div>
+            <div class="ins-search-container">
+                <div class="ins-input-wrapper">
+                    <input type="text" class="ins-search-input" placeholder="想要查找什么..."
+                        x-webkit-speech />
+                    <button type="button" class="close ins-close ins-selectable" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="ins-section-wrapper">
+                    <div class="ins-section-container"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+        <ul class="nav navbar-nav main-nav">
+            <li class="menu-item menu-item-home">
+                <a href="/">
+                    <i class="icon icon-home-fill"></i>
+                  <span class="menu-title">首页</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-archives">
+                <a href="/posts/">
+                    <i class="icon icon-archives-fill"></i>
+                  <span class="menu-title">归档</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-categories">
+                <a href="/categories/">
+                    <i class="icon icon-folder"></i>
+                  <span class="menu-title">分类</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-tags">
+                <a href="/tags/">
+                    <i class="icon icon-tags"></i>
+                  <span class="menu-title">标签</span>
+                </a>
+            </li>
+            <li class="menu-item menu-item-about">
+                <a href="/about/">
+                    <i class="icon icon-cup-fill"></i>
+                  <span class="menu-title">关于</span>
+                </a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content"><p>&nbsp&nbspWelcome to my blog！</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+      <div class="widget">
+    <h3 class="widget-title"> 分类</h3>
+    <div class="widget-body">
+        <ul class="category-list">
+            <li class="category-list-item"><a href="https://loardforwin.github.io/categories/%E5%AD%A6%E4%B9%A0/" class="category-list-link">学习</a><span class="category-list-count">3</span></li>
+        </ul>
+    </div>
+</div>
+      <div class="widget">
+    <h3 class="widget-title"> 标签</h3>
+    <div class="widget-body">
+        <ul class="tag-list">
+            
+            
+            <li class="tag-list-item"><a href="https://loardforwin.github.io/tags/about/" class="tag-list-link">about</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://loardforwin.github.io/tags/hogo%E5%8D%9A%E5%AE%A2%E5%91%BD%E4%BB%A4/" class="tag-list-link">hogo博客命令</a><span
+                    class="tag-list-count">1</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://loardforwin.github.io/tags/%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/" class="tag-list-link">学习小结</a><span
+                    class="tag-list-count">4</span></li>
+            
+            
+            <li class="tag-list-item"><a href="https://loardforwin.github.io/tags/%E9%9A%8F%E7%AC%94/" class="tag-list-link">随笔</a><span
+                    class="tag-list-count">3</span></li>
+            
+        </ul>
+
+    </div>
+</div>
+      
+<div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+        <ul class="recent-post-list list-unstyled no-thumbnail">
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://loardforwin.github.io/2020/08/mysql%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" class="title">MySQL基础语法</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-08-03 18:13:21 &#43;0800 CST" itemprop="datePublished">2020-08-03</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://loardforwin.github.io/2020/08/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8Cnavicat%E5%BF%AB%E6%8D%B7%E8%AF%AD%E6%B3%95/" class="title">MySQL数据库和Navicat快捷语法</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-08-03 10:33:40 &#43;0800 CST" itemprop="datePublished">2020-08-03</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://loardforwin.github.io/2020/08/%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E5%99%A8-classloader/" class="title">类的加载器ClassLoader</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-08-01 20:37:31 &#43;0800 CST" itemprop="datePublished">2020-08-01</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://loardforwin.github.io/2020/08/%E5%8F%8D%E5%B0%84/" class="title">反射</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-08-01 20:35:57 &#43;0800 CST" itemprop="datePublished">2020-08-01</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
+                        <a href="https://loardforwin.github.io/2020/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E5%8D%9A%E5%AE%A2%E5%91%BD%E4%BB%A4/" class="title">我的第一篇博客——博客相关命令</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-07-30 15:09:03 &#43;0800 CST" itemprop="datePublished">2020-07-30</time>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+  </div>
+</aside>
+
+    
+    
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">文章目录</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2020/08/mysql%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"
+    >MySQL基础语法</a
+  >
+</h1>
+
+      <div class="article-meta">
+        
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://loardforwin.github.io/2020/08/mysql%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" class="article-date">
+  <time datetime="2020-08-03 18:13:21 &#43;0800 CST" itemprop="datePublished">2020-08-03</time>
+</a>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/"> 学习 </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/%E9%9A%8F%E7%AC%94/"> 随笔 </a>
+    <a class="article-tag-link" href="/tags/%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/"> 学习小结 </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/08/mysql%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/#comments"
+            class="article-comment-link">评论</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 5140字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 11分 </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h2 id="1创建表create">1.创建表(create)</h2>
+<pre><code class="language-mysql">/*
+  创建数据表: 关键字 create table
+  格式:
+    create table 表名(
+       列名1 数据类型[长度] [约束],
+       列名2 数据类型[长度] [约束],
+       列名3 数据类型[长度] [约束]
+    );
+   细节: 可以使用关键字作为名字,但是为了规范,避开关键字
+   使用关键字作为名字,请你添加反引号 ``	  ''  &quot;&quot;
+
+   创建学生信息表
+   编号,姓名,年龄
+*/
+CREATE TABLE student(
+	id INT,
+	NAME VARCHAR(10),
+	age INT
+);
+
+#需求：创建雇员表，包含雇员的姓名，密码，性别, 生日信息。
+CREATE TABLE employee(
+	NAME VARCHAR(50),
+	PASSWORD VARCHAR(50),
+	gender CHAR(1),
+	birthday DATE
+);
+
+show create table employee;
+</code></pre>
+<h2 id="2修改表结构modify添加列修改列的数据类型换列名换表名">2.修改表结构(modify)(添加列，修改列的数据类型，换列名，换表名）</h2>
+<pre><code class="language-sql">/* 在已经创建好的数据表中，修改其表的结构
+	 操作具有风险性（数据丢失）
+	 关键字 alter table
+*/
+-- 数据表添加列 列明desc 可变字符255//反引号不能省略
+-- alter table 表明 add 列名 数据类型[长度][约束]
+alter table student add `desc` varchar(255);
+
+-- 修改列的数据类型desc列，修改为int
+-- alter table 表明 modify 列名 新数据类型[长度][约束]
+alter table student modify `desc` int;
+
+-- 修改列名 desc列名改为description
+-- alter table 表名 change 旧列名 新列名 新数据类型[长度][约束]
+alter table student change `desc` `description` int;
+
+-- 修改表明student修改为student_table
+-- rename table 旧表名 to新表名
+-- 修改出问题了先不要慌,等一会表就会更改了
+rename table student_table to student;
+</code></pre>
+<h2 id="3向表中插入数据insert有三种方式">3.向表中插入数据(insert)(有三种方式)</h2>
+<pre><code class="language-sql">/*
+	数据表添加数据C
+	关键字 insert into values
+*/
+-- 添加数据的格式1：
+-- insert[into] 表名(列名1，列名2，列名3)values(值1，值2，值3)
+-- 数据库中，值的引号问题，数字可以不写任何符号，其他数据类型加引号，单引号
+insert into student(id,name,age,description)values(1,'张三',20,'学习努力');
+
+-- 添加数据的格式2：
+-- insert[into] 表名 values(全部的值)
+insert into student values(2,'李四',21,'不好好学习');
+select * from student;
+
+-- 添加数据的格式3：批量数据
+-- insert[into] 表名 values(全部的值),(全部的值),(全部的值)
+insert into student values
+(3,'王五',24,'还是可以'),
+(4,'赵六',12,'太难太难'),
+(5,'可怕',21,'play game')
+</code></pre>
+<h2 id="4更新表的数据update">4.更新表的数据(update)</h2>
+<pre><code class="language-sql">/*
+	更新数据
+	对原有数据进行修改
+	对没有确定，改了就是改了
+	关键字 update set where
+	注意：
+		修改数据一定要进行条件的筛选
+		没有条件筛选，表中的所有数据，都会修改
+*/
+-- update 表名 set 列=值，列=值，列=值 where 条件
+-- 修改王五，名字，年龄，描述
+update student set name='王五五',age=22,description='一般般' where id=3;
+select * from student;
+select * from student;
+</code></pre>
+<h2 id="5删除表的数据两种方式delete和truncate区别">5.删除表的数据(两种方式，delete和truncate区别)</h2>
+<pre><code class="language-sql">/*
+	删除数据
+	关键字 delete from
+	删除数据必须添加条件，否则全部删除
+*/
+delete from student where id=5;
+
+-- 删除全部数据
+-- delete from student;
+-- 删表并建表，删除数据的同时连同约束一起
+-- truncate student;
+</code></pre>
+<h2 id="6表的数据约束主键约束的三种方式constraint约束区联合主键">6.表的数据约束(主键约束的三种方式，constraint约束区,联合主键)</h2>
+<pre><code class="language-sql">/*
+	约束：限制
+	数据表的数据，不能随意，需要做到限制
+	主键约束 primary key
+	约束内容：
+		被设置为主键约束的列，数据在表中具有唯一性
+		这个主键列的数据，不能是空（null）
+		每个表只能设置一个主键，每个数据表都应该有一个主键
+*/
+-- 创建主键约束的方式1：创建表的同时，直接创建
+-- 结尾的分号可加可不加
+create table persons(
+		id int primary key,
+		firstname varchar(50),
+		lastname varchar(50),
+		address varchar(50)
+);
+insert into persons(id,firstname,lastname,address)values(1,'利库','第三方','北京');
+-- 主键约束不为空，切不能重复
+
+-- 创建主键约束的方式2：在创建表的约束区域创建//约束区：所有字段与最后);之间的区域就叫做约束区，用来写约束内容
+-- 关键字 (约束的英文)constraint ,可以指定约束的名字 约束字母缩写_列名
+drop table persons;
+create table persons(
+		id int,
+		firstname varchar(50),
+		lastname varchar(50),
+		address varchar(50),
+		constraint primary key pk_id (id)
+);
+
+-- 创建主键约束的方式3：先建好表，修改alter table
+drop table persons;
+create table persons(
+		id int,
+		firstname varchar(50),
+		lastname varchar(50),
+		address varchar(50)
+);
+
+alter table persons add constraint PRIMARY KEY pk_id (id);
+
+-- 联合主键，多个列一起，实现一个主键
+drop table persons;
+create table persons(
+		id int,
+		firstname varchar(50),
+		lastname varchar(50),
+		address varchar(50),
+		constraint primary key pk_id (firstname,lastname)
+);
+</code></pre>
+<h2 id="7表的数据自增长auto_increment">7.表的数据自增长(auto_increment)</h2>
+<pre><code class="language-sql">/*
+	数据的自动增长列(免维护)
+	设置为自动增长列：
+		必须是整数
+		必须是主键
+		关键字：auto_increment
+*/
+drop table persons;
+create table persons(
+		id int primary key auto_increment,
+		firstname varchar(50),
+		lastname varchar(50),
+		address varchar(50)
+);
+insert into persons(firstname,lastname,address)values('刘','德华','香港');
+insert into persons(firstname,lastname,address)values('123','德华','香港');
+
+-- 添加语句，可以简化书写//相对于有自增的内容
+-- 主键列，写值是null,自动增长
+insert into persons values(null,'xc','cc','dd');
+
+-- 删除主键是3的数据
+-- 用delete删除表数据表自增长用过的数据就不会再用了
+delete from persons;
+delete from persons where id=3;
+-- 自增长用过的数据就不会再用了
+insert into persons values(null,'ss','dd','ff');
+
+-- 如果用truncate删除表数据，再加表数据的时候，自增长会重置为1//含义：truncate删除表连表约束都一起删了
+truncate persons;
+insert into persons values(null,'ss','dd','ff');
+</code></pre>
+<h2 id="8表的非空约束not-null">8.表的非空约束（not null）</h2>
+<pre><code class="language-sql">/*
+	非空约束：
+		约束的是这个列数据不能是null
+*/
+drop table persons;
+create table persons(
+		id int primary key auto_increment,
+		firstname varchar(50) not null,
+		lastname varchar(50),
+		address varchar(50)
+);
+insert into persons values(null,'郭','ss','dd');
+-- 下面程序是错误的，写不进去
+insert into persons values(null,null,'ss','dd');
+-- 下面程序是可以的null！=''
+insert into persons values(null,'','ss','dd');
+insert into persons(id,lastname,address) values(3,'dd','dd');//有点问题，要提前写好默认值才能用
+
+-- 创建非空约束的方式2：修改表结构 alter table
+drop table persons;
+create table persons(
+		id int primary key auto_increment,
+		firstname varchar(50),
+		lastname varchar(50),
+		address varchar(50)
+);
+alter table persons modify firstname varchar(255) not null;
+-- 删除非空约束
+alter table persons modify firstname varchar(255);
+</code></pre>
+<h2 id="9表唯一约束unique三种方法删除约束">9.表唯一约束(unique,三种方法，删除约束)</h2>
+<pre><code class="language-sql">/*
+	唯一约束：
+	设置唯一约束的这个列，数据必须唯一性
+	
+
+	主键约束也具有唯一性
+	唯一约束也具有唯一性
+	
+	主键约束，数据不能是真实的业务数据
+	手机号，能不能作为主键
+	//不能  原因：快速注册
+	关键字 unique
+
+*/
+drop table persons;
+-- 创建唯一约束的方式1：创建表的同时，直接创建
+create table persons(
+		id int primary key auto_increment,
+		firstname varchar(50) unique,
+		lastname varchar(50),
+		address varchar(50)
+);
+
+insert into persons values(null,'z','s','d');
+-- 数据添加失败，唯一约束
+insert into persons values(null,'z','sxx','dxx');
+-- 非空约束对null值没有影响可以持续加入约束条件为null的数据
+insert into persons values(null,null,'sxx','dxx');
+insert into persons values(null,null,'sxx','dxx');
+-- 非空约束对''值的持续加入是不允许的
+insert into persons values(null,'','sxx','dxx');
+insert into persons values(null,'','sxx','dxx');
+
+-- 创建唯一约束的方式2：constraint区域添加
+drop table persons;
+create table persons(
+		id int primary key auto_increment,
+		firstname varchar(50),
+		lastname varchar(50),
+		address varchar(50),
+		constraint unique qk_firstname(firstname)
+);
+
+-- 创建唯一约束的方式3：修改表结构alter table
+drop table persons;
+create table persons(
+		id int primary key auto_increment,
+		firstname varchar(50),
+		lastname varchar(50),
+		address varchar(50)
+);
+alter table persons modify firstname varchar(255) unique;
+
+insert into persons values(null,'z','s','d');
+-- 数据添加失败，唯一约束
+insert into persons values(null,'z','sxx','dxx');
+
+-- 删除唯一约束
+/*
+	添加唯一约束后：数据库mysql认为，这个列会经常被查询
+	会为这个列自动添加 索引(提高数据查询效率)
+	删除的是这个索引
+*/
+-- 约束名没有定义就是列名，如下firstname，如果定义了那就是定义名
+alter table persons drop index firstname;
+</code></pre>
+<h2 id="10表的默认约束default">10.表的默认约束（default）</h2>
+<pre><code class="language-sql">/*
+	默认约束：
+	对一个列，数据默认
+	关键字 default
+*/
+
+-- 创建默认约束方式1：创建表直接添加
+drop table persons;
+create table persons(
+		id int primary key auto_increment,
+		firstname varchar(50),
+		lastname varchar(50),
+		address varchar(50) default '北京市'
+);
+
+insert into persons value(null,'x','d',null);//默认值加入无效
+insert into persons(firstname,lastname) value('dd','ss');//默认值有效
+
+-- 创建默认约束方式2：修改表结构
+alter table persons modify address varchar(255) default '天津市';
+</code></pre>
+<h3 id="准备工作">准备工作</h3>
+<blockquote>
+<p>/*
+c001家电
+c002服装
+c003化妆品
+c004食品
+c005饮料
+*/
+#创建商品表：
+create table product(
+pid int primary key,
+&ndash; 		名称
+pname varchar(20),
+&ndash; 		价格
+price double,
+&ndash; 		分类
+category_id varchar(32)
+);
+INSERT INTO product(pid,pname,price,category_id) VALUES(1,&lsquo;联想&rsquo;,5000,&lsquo;c001&rsquo;);
+INSERT INTO product(pid,pname,price,category_id) VALUES(2,&lsquo;海尔&rsquo;,3000,&lsquo;c001&rsquo;);
+INSERT INTO product(pid,pname,price,category_id) VALUES(3,&lsquo;雷神&rsquo;,5000,&lsquo;c001&rsquo;);
+INSERT INTO product(pid,pname,price,category_id) VALUES(4,&lsquo;JACK JONES&rsquo;,800,&lsquo;c002&rsquo;);
+INSERT INTO product(pid,pname,price,category_id) VALUES(5,&lsquo;真维斯&rsquo;,200,&lsquo;c002&rsquo;);
+INSERT INTO product(pid,pname,price,category_id) VALUES(6,&lsquo;花花公子&rsquo;,440,&lsquo;c002&rsquo;);
+INSERT INTO product(pid,pname,price,category_id) VALUES(7,&lsquo;劲霸&rsquo;,2000,&lsquo;c002&rsquo;);
+INSERT INTO product(pid,pname,price,category_id) VALUES(8,&lsquo;香奈儿&rsquo;,800,&lsquo;c003&rsquo;);
+INSERT INTO product(pid,pname,price,category_id) VALUES(9,&lsquo;相宜本草&rsquo;,200,&lsquo;c003&rsquo;);
+INSERT INTO product(pid,pname,price,category_id) VALUES(10,&lsquo;面霸&rsquo;,5,&lsquo;c003&rsquo;);
+INSERT INTO product(pid,pname,price,category_id) VALUES(11,&lsquo;好想你枣&rsquo;,56,&lsquo;c004&rsquo;);
+INSERT INTO product(pid,pname,price,category_id) VALUES(12,&lsquo;香飘飘奶茶&rsquo;,1,&lsquo;c005&rsquo;);
+INSERT INTO product(pid,pname,price,category_id) VALUES(13,&lsquo;果9&rsquo;,1,NULL);</p>
+</blockquote>
+<h2 id="11表的数据查询模糊查询selectfromwhereas-distinct去重">11.表的数据查询（模糊查询）(select、from、where、as、 distinct（去重）)</h2>
+<h3 id="111表查询的顺序">11.1表查询的顺序</h3>
+<p><strong>select 6</strong></p>
+<p><strong>from 1</strong></p>
+<p><strong>where 2</strong></p>
+<p><strong>group by 3</strong></p>
+<p><strong>having 4</strong></p>
+<p><strong>order by 5</strong></p>
+<pre><code class="language-sql">/*
+	数据的基本查询
+	拼接语句
+	关键字
+		select 选择，查询
+		from 来自哪里，哪个表
+		where 条件
+		as 重命名
+		distinct 去重
+		
+
+		基本语法：
+		select (列名，列名) from 查询指定的列
+		select * from 表名 查询所有列
+
+-- 	*上班一般不会用，效率低
+*/
+
+-- 查询数据表，显示商品名和价格
+select pname,price from product;
+
+-- 查询全部的商品数据
+select * from product;
+
+-- 查询数据表，查询价格，去掉重复的,基本查询一列
+select distinct(price) from product;
+
+-- 查询数据表，所有的商品价格上调100元；
+-- 下面的相关操作都可以
+select pname,price+100 as 价格 from product;
+select pname,price+100 as '价格' from product;
+select pname,price+100 as price from product;
+select pname,price+100 as 'price' from product;
+select pname,price+100 价格 from product;
+select pname,price+100 price from product;
+
+#查询商品名称为“花花公子”的商品所有信息：
+select * from product where pname='花花公子';
+#查询价格为800商品
+select * from product where price=800;
+#查询价格不是800的所有商品
+select * from product where price!=800;
+select * from product where price&lt;&gt;800;
+select * from product where not(price=800);
+#查询商品价格大于60元的所有商品信息
+select * from product where price&gt;60;
+#查询商品价格在200到1000之间所有商品
+-- between前面的值一定要小于后面的值
+select * from product where price between 200 and 1000;
+select * from product where price&gt;=200 and price&lt;=1000;
+#查询商品价格是200或800的所有商品
+select * from product where price in(200,800);
+select * from product where price=200 or price=800;
+
+# LIKe 中的 %代表匹配任意长度的任意字符; _代表匹配一个任意字符
+
+#查询商品名称含有'霸'字的所有商品
+select * from product where pname like '%霸%';
+#查询商品名称以'香'开头的所有商品
+select * from product where pname like '香%';
+#查询商品名称第二个字为'想'的所有商品
+select * from product where pname like '_想%';
+#商品没有分类id的商品
+select * from product where category_id is null;
+#查询有分类id的商品
+select * from product where category_id is not null;
+</code></pre>
+<h2 id="12表的排序查询order-by-ascdesc">12.表的排序查询(order by asc/desc)</h2>
+<pre><code class="language-sql">/*
+	排序查询：
+		对查询的结果集排序
+		关键字 order by
+		升序：asc 默认的，可以不写
+		降序：desc
+		排序写再sql语句的最后
+*/
+#使用价格排序(降序)
+select * from product order by price desc;
+#在价格排序(降序)的基础上，以分类排序(降序)
+select * from product order by price desc,category_id desc;
+#显示商品的价格(去重复)，并排序(降序)
+select distinct(price) from product order by price desc;
+</code></pre>
+<h2 id="13表的聚合函数summinmaxavgcount">13.表的聚合函数（sum、min、max、avg、count）</h2>
+<pre><code class="language-sql">/*
+	聚合函数
+	sum(列名) 列的所有值求和
+	min(列名)	查询列中的最小值
+	max(列名)	查询列中的最大值
+	avg(列名)	查询列中的平均值/列数，求和
+	count(列名) 统计该列共有多少条数据
+*/
+#查询商品的总条数
+-- 不推荐
+select count(*) from product;
+-- 推荐
+select count(pid) from product;
+select count(category_id) from product;
+#查询价格大于200商品的总条数
+select count(*) from product where price&gt;200;
+#查询所有商品的价格总和
+select sum(price) from product;
+#查询分类为'c001'的所有商品的价格总和
+select sum(price) from product where category_id='c001';
+#查询分类为'c002'所有商品的平均价格
+select avg(price) from product where category_id='c002';
+#查询商品的最大价格和最小价格
+select max(price),min(price) from product;
+</code></pre>
+<h2 id="14表的分组查询group-byhaving">14.表的分组查询(group by、having)</h2>
+<pre><code class="language-sql">/*
+	分组查询
+	举例：
+		80人，分成10个组，每个组8人
+		统计数组，每个小组统计
+		1组：成绩100
+		2组：成绩99
+		
+
+		一个列的相同值，井行分组
+		关键字 group by 列名
+
+*/
+-- 按照商品分类进行价格的求和
+select sum(price),category_id from product group by category_id;
+-- 需求追加，不想看到求和后价格低于1000的
+-- 在分组求和后的数据基础之上，再次条件过滤
+-- where条件过滤在表中过滤(真实的数据表)
+-- 查询后的结果，过滤条件，使用关键字having
+select sum(price) price,category_id from product group by category_id having price&gt;1000;
+
+# 统计各个分类商品的个数
+
+select pname,count(pname) from product group by pname;
+
+# 统计各个分类商品的个数,且只显示个数大于1的信息
+
+-- group by创建的虚拟表不能用where只能用having
+select category_id,count(category_id) count from product group by category_id having count&gt;1;
+
+# 统计价格&gt;200元的 各个分类商品的个数,且只显示个数大于1的信息
+
+select category_id,count(category_id) count from product where price&gt;200 group by category_id having count&gt;1;
+</code></pre>
+<h2 id="15表的限制查询limit">15.表的限制查询(limit)</h2>
+<pre><code class="language-sql">/*
+	限制条数查询
+	关键字 limit (sql语句的最末尾)
+	语法：limit m,n
+	m:数据表的开始索引0开始
+	n:限制显示多少条
+	mysql默认显示1000条
+*/
+select * from product limit 1,10;
+select * from product;
+</code></pre>
+<h2 id="tips计算分页索引值求分页数">tips（计算分页索引值，求分页数）</h2>
+<pre><code class="language-sql">/*
+	索引=（当前页数-1）*每页条数
+	知道总页数(n)，每页有m条,求有多少页?
+		向上取整 Math.ceil(n/m)=总共有多少页
+*/
+</code></pre>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接: </strong>
+      <a href="https://loardforwin.github.io/2020/08/mysql%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" title="MySQL基础语法" target="_blank" rel="external">https://loardforwin.github.io/2020/08/mysql%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/loardforwin" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://loardforwin.github.io/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/loardforwin" target="_blank"><span class="text-dark">Loardforwin</span><small class="ml-1x"></small></a></h3>
+        <div>life is fantastic~</div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+<section id="comments">
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://loardforwin.github.io/2020/08/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8Cnavicat%E5%BF%AB%E6%8D%B7%E8%AF%AD%E6%B3%95/" title="MySQL数据库和Navicat快捷语法"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="文章目录" role="button">
+                    <span>[&nbsp;</span><span>文章目录</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
+        </div>
+    </div>
+</nav>
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+<ul class="social-links">
+    <li><a href="https://github.com/loardforwin" target="_blank" title="github" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-github"></i></a></li>
+    <li><a href="https://loardforwin.github.io/index.xml" target="_blank" title="rss" data-toggle=tooltip data-placement=top >
+            <i class="icon icon-rss"></i></a></li>
+</ul>
+  <div class="copyright">
+    &copy;
+    2020
+    
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_SVG"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            showMathMenu: false, //disables context menu
+            tex2jax: {
+            inlineMath: [ ['$','$'], ['\\(','\\)'] ]
+           }
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/highlight.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/python.min.js" defer></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/highlight.js/9.15.10/languages/javascript.min.js" defer></script><script>
+    hljs.configure({
+        tabReplace: '    ', 
+        classPrefix: ''     
+        
+    })
+    hljs.initHighlightingOnLoad();
+</script>
+<script src="https://loardforwin.github.io/js/application.min.bdeb64b910570b6c41badc6a05b7afb0c8ad9efd8525de3c7257d59e786326a3.js"></script>
+<script src="https://loardforwin.github.io/js/plugin.min.51ff8c7317566f82259170fa36e09c4493adc9b9378b427a01ad3f017ebac7dd.js"></script>
+
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(未命名)',
+            },
+            ROOT_URL: 'https:\/\/loardforwin.github.io',
+            CONTENT_URL: 'https:\/\/loardforwin.github.io\/searchindex.json ',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script type="text/javascript" src="https://loardforwin.github.io/js/insight.min.a343cd9a5a7698336b28ef3a7c16a3a1b1d2d5fb17dc8ed04022bbe08cc5459073a15bdafa3a8a58cdd56080784bdd69fa70b1ae8597565c799c57ed00f0e120.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+<script>
+    tocbot.init({
+        
+        tocSelector: '.js-toc',
+        
+        contentSelector: '.js-toc-content',
+        
+        headingSelector: 'h1, h2, h3',
+        
+        hasInnerContainers: true,
+    });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: md5(location.pathname),
+        distractionFreeMode: true
+    });
+    gitalk.render('comments');
+</script>
+
+  </body>
+</html>

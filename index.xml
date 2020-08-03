@@ -5,10 +5,28 @@
     <link>https://loardforwin.github.io/</link>
     <description>Recent content on Loardforwin&#39;s Technology Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 01 Aug 2020 20:37:31 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2020 18:13:21 +0800</lastBuildDate>
     
         <atom:link href="https://loardforwin.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MySQL基础语法</title>
+      <link>https://loardforwin.github.io/2020/08/mysql%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Mon, 03 Aug 2020 18:13:21 +0800</pubDate>
+      
+      <guid>https://loardforwin.github.io/2020/08/mysql%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</guid>
+      <description>1.创建表(create) /* 创建数据表: 关键字 create table 格式: create table 表名( 列名1 数据类型[长度] [约束], 列名2 数据类型[长度] [约束], 列名3 数据</description>
+    </item>
+    
+    <item>
+      <title>MySQL数据库和Navicat快捷语法</title>
+      <link>https://loardforwin.github.io/2020/08/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8Cnavicat%E5%BF%AB%E6%8D%B7%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Mon, 03 Aug 2020 10:33:40 +0800</pubDate>
+      
+      <guid>https://loardforwin.github.io/2020/08/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8Cnavicat%E5%BF%AB%E6%8D%B7%E8%AF%AD%E6%B3%95/</guid>
+      <description>注意：[]表示内容可变 MySQL数据库相关命令 所有命令需要加分号（ ；） 创建数据库： create database [数据库名]; 删除数据库： drop database [数据库名]; 设置已存在</description>
+    </item>
     
     <item>
       <title>类的加载器ClassLoader</title>
