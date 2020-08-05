@@ -27,7 +27,8 @@
     
     <link rel="stylesheet" href="https://loardforwin.github.io/css/style.min.c4bc7071f132c964c2116bca53b392933f377e5ca7b7051ed245187c621a2d3e.css">
     
-    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
     <meta property="og:title" content="多表查询" />
 <meta property="og:description" content="多表查询新建数据库数据 /* 多表查询 新建的数据库 */ # 分类表 CREATE TABLE category ( cid VARCHAR(32) PRIMARY KEY , cname VARCHAR(50) ); #商品表 CREATE TABLE products( pid VARCHAR(32) PRIMARY KEY , pname VARCHAR(50), price INT, flag VARCHAR(2), #是否上架标记为：1表示上" />
@@ -289,12 +290,6 @@
     <a class="article-tag-link" href="/tags/%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/"> 学习小结 </a>
   </span>
 
-	<span class="article-read hidden-xs">
-    	<i class="icon icon-eye-fill" aria-hidden="true"></i>
-    	<span id="https://loardforwin.github.io/2020/08/%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/" class="leancloud_visitors"  data-flag-title="多表查询">
-			<span class="leancloud-visitors-count">0</span>
-		</span>
-    </span>
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/08/%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/#comments"
             class="article-comment-link">评论</a></span>
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1598字</span>
@@ -506,7 +501,6 @@ drop index index_price on products;
     </div>
   </article>
 <section id="comments">
-    <div id="vcomments"></div>
 </section>
 
 </div><nav class="bar bar-footer clearfix" data-stick-bottom>
@@ -613,26 +607,20 @@ drop index index_price on products;
     });
 </script>
 
-<script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/valine"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
 <script type="text/javascript">
-    var GUEST = ['nick', 'mail', 'link'];
-    var meta = 'nick,mail';
-    meta = meta.split(',').filter(function (item) {
-        return GUEST.indexOf(item) > -1;
+    var gitalk = new Gitalk({
+        clientID: 'Iv1.cdee3eb38d93c82a',
+        clientSecret: '19d6f20666ad91e3e6efab84a4ea7aa2a3e9abab',
+        repo: 'loardforwin',
+        owner: 'loardforwin',
+        admin: ['loardforwin'],
+        id: md5(location.pathname),
+        distractionFreeMode: true
     });
-    new Valine({
-        el: '#vcomments',
-        verify: false ,
-        notify: true ,
-        appId: 'fWfnvx8bwMHONMN0qftqSeET-gzGzoHsz',
-        appKey: 'S89dVf95M8jLjDSQuI7JHq29',
-        placeholder: 'enjoy~',
-        avatar: 'mm',
-        meta: meta,
-        pageSize: '10' || 10,
-        visitor: true 
-});
+    gitalk.render('comments');
 </script>
 
   </body>
