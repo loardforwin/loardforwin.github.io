@@ -27,8 +27,7 @@
     
     <link rel="stylesheet" href="https://loardforwin.github.io/css/style.min.c4bc7071f132c964c2116bca53b392933f377e5ca7b7051ed245187c621a2d3e.css">
     
-    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" async>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
     <meta property="og:title" content="类的加载器ClassLoader" />
 <meta property="og:description" content="类的加载器 ClassLoader ——————运行class，加载到内存，方法区 加载器用IO流对象将class文件加载到内存 三个加载器都是CLassLoader的" />
@@ -360,6 +359,7 @@ null//出现null的情况原因：类的加载器是C++编写的，和Java根本
     </div>
   </article>
 <section id="comments">
+    <div id="vcomments"></div>
 </section>
 
 </div><nav class="bar bar-footer clearfix" data-stick-bottom>
@@ -466,20 +466,26 @@ null//出现null的情况原因：类的加载器是C++编写的，和Java根本
     });
 </script>
 
-
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine"></script>
 <script type="text/javascript">
-    var gitalk = new Gitalk({
-        clientID: '',
-        clientSecret: '',
-        repo: '',
-        owner: '',
-        admin: [''],
-        id: md5(location.pathname),
-        distractionFreeMode: true
+    var GUEST = ['nick', 'mail', 'link'];
+    var meta = 'nick,mail';
+    meta = meta.split(',').filter(function (item) {
+        return GUEST.indexOf(item) > -1;
     });
-    gitalk.render('comments');
+    new Valine({
+        el: '#vcomments',
+        verify: null ,
+        notify: null ,
+        appId: '',
+        appKey: '',
+        placeholder: 'enjoy~',
+        avatar: 'mm',
+        meta: meta,
+        pageSize: '10' || 10,
+        visitor: false 
+});
 </script>
 
   </body>

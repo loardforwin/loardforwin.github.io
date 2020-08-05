@@ -27,8 +27,7 @@
     
     <link rel="stylesheet" href="https://loardforwin.github.io/css/style.min.c4bc7071f132c964c2116bca53b392933f377e5ca7b7051ed245187c621a2d3e.css">
     
-    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" async>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
     <meta property="og:title" content="反射" />
 <meta property="og:description" content="反射（Reflect） 反射关键对象：class文件对象 类加载器创建，获取使用 三种方法： ​ 1：对象的方法getClass()获取（getCla" />
@@ -392,6 +391,7 @@ methodName=XXX
     </div>
   </article>
 <section id="comments">
+    <div id="vcomments"></div>
 </section>
 
 </div><nav class="bar bar-footer clearfix" data-stick-bottom>
@@ -498,20 +498,26 @@ methodName=XXX
     });
 </script>
 
-
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+<script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine"></script>
 <script type="text/javascript">
-    var gitalk = new Gitalk({
-        clientID: '',
-        clientSecret: '',
-        repo: '',
-        owner: '',
-        admin: [''],
-        id: md5(location.pathname),
-        distractionFreeMode: true
+    var GUEST = ['nick', 'mail', 'link'];
+    var meta = 'nick,mail';
+    meta = meta.split(',').filter(function (item) {
+        return GUEST.indexOf(item) > -1;
     });
-    gitalk.render('comments');
+    new Valine({
+        el: '#vcomments',
+        verify: null ,
+        notify: null ,
+        appId: '',
+        appKey: '',
+        placeholder: 'enjoy~',
+        avatar: 'mm',
+        meta: meta,
+        pageSize: '10' || 10,
+        visitor: false 
+});
 </script>
 
   </body>
