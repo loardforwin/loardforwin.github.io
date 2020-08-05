@@ -2,7 +2,8 @@
 <html lang="zh">
   <head>
     <title>
-        Loardforwin&#39;s Technology Blog</title>
+        多表查询 - Loardforwin&#39;s Technology Blog
+      </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -19,27 +20,34 @@
     <meta http-equiv="window-target" content="_top" />
     
     
-    
+    <meta name="description" content="多表查询新建数据库数据 /* 多表查询 新建的数据库 */ # 分类表 CREATE TABLE category ( cid VARCHAR(32) PRIMARY KEY , cname VARCHAR(50) ); #商品表 CREATE TABLE products( pid VARCHAR(32) PRIMARY KEY , pname VARCHAR(50), price INT, flag VARCHAR(2), #是否上架标记为：1表示上" />
     <meta name="generator" content="Hugo 0.74.3 with theme pure" />
-    <title>Loardforwin&#39;s Technology Blog</title>
+    <title>多表查询 - Loardforwin&#39;s Technology Blog</title>
     
-    <link rel="alternate" type="application/rss+xml" href="https://loardforwin.github.io/index.xml" title="Loardforwin's Technology Blog" />
     
     <link rel="stylesheet" href="https://loardforwin.github.io/css/style.min.c4bc7071f132c964c2116bca53b392933f377e5ca7b7051ed245187c621a2d3e.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="Loardforwin&#39;s Technology Blog" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://loardforwin.github.io/" />
-<meta property="og:updated_time" content="2020-08-04T15:43:09+08:00" />
-<meta itemprop="name" content="Loardforwin&#39;s Technology Blog">
-<meta itemprop="description" content="">
+    <meta property="og:title" content="多表查询" />
+<meta property="og:description" content="多表查询新建数据库数据 /* 多表查询 新建的数据库 */ # 分类表 CREATE TABLE category ( cid VARCHAR(32) PRIMARY KEY , cname VARCHAR(50) ); #商品表 CREATE TABLE products( pid VARCHAR(32) PRIMARY KEY , pname VARCHAR(50), price INT, flag VARCHAR(2), #是否上架标记为：1表示上" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://loardforwin.github.io/2020/08/%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/" />
+<meta property="article:published_time" content="2020-08-04T15:43:09+08:00" />
+<meta property="article:modified_time" content="2020-08-04T15:43:09+08:00" />
+<meta itemprop="name" content="多表查询">
+<meta itemprop="description" content="多表查询新建数据库数据 /* 多表查询 新建的数据库 */ # 分类表 CREATE TABLE category ( cid VARCHAR(32) PRIMARY KEY , cname VARCHAR(50) ); #商品表 CREATE TABLE products( pid VARCHAR(32) PRIMARY KEY , pname VARCHAR(50), price INT, flag VARCHAR(2), #是否上架标记为：1表示上">
+<meta itemprop="datePublished" content="2020-08-04T15:43:09+08:00" />
+<meta itemprop="dateModified" content="2020-08-04T15:43:09+08:00" />
+<meta itemprop="wordCount" content="1598">
+
+
+
+<meta itemprop="keywords" content="随笔,学习小结," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Loardforwin&#39;s Technology Blog"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="多表查询"/>
+<meta name="twitter:description" content="多表查询新建数据库数据 /* 多表查询 新建的数据库 */ # 分类表 CREATE TABLE category ( cid VARCHAR(32) PRIMARY KEY , cname VARCHAR(50) ); #商品表 CREATE TABLE products( pid VARCHAR(32) PRIMARY KEY , pname VARCHAR(50), price INT, flag VARCHAR(2), #是否上架标记为：1表示上"/>
 
     <!--[if lte IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -243,20 +251,20 @@
 
     
     
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">文章目录</h4>
+    <nav id="toc" class="js-toc toc">
 
-<main class="main" role="main">
-  
-  <div class="content article-list">
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
     
-    
-    
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
+    <div class="article-header">
+      <h1 itemprop="name">
   <a
     class="article-title"
     href="/2020/08/%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/"
@@ -264,14 +272,11 @@
   >
 </h1>
 
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        多表查询新建数据库数据 /* 多表查询 新建的数据库 */ # 分类表 CREATE TABLE category ( cid VARCHAR(32) PRIMARY KEY , cname VARCHAR(50) ); #商品表 CREATE TABLE products( pid VARCHAR(32) PRIMARY KEY , pname VARCHAR(50), price INT, flag VARCHAR(2), #是否上架标记为：1表示上
-      </div>
-      <p class="article-meta">
+      <div class="article-meta">
+        
 <span class="article-date">
   <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://loardforwin.github.io/2020/08/%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/" class="">
+<a href="https://loardforwin.github.io/2020/08/%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/" class="article-date">
   <time datetime="2020-08-04 15:43:09 &#43;0800 CST" itemprop="datePublished">2020-08-04</time>
 </a>
 </span>
@@ -285,250 +290,243 @@
     <a class="article-tag-link" href="/tags/%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/"> 学习小结 </a>
   </span>
 
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2020/08/%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/08/%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/#comments"
+            class="article-comment-link">评论</a></span>
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1598字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 4分 </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2020/08/%E8%A1%A8%E7%9A%84%E5%85%B3%E7%B3%BB/"
-    >表的关系</a
-  >
-</h1>
-
       </div>
-      <div class="article-entry text-muted" itemprop="description">
-        1.创建主外键关系 /* 创建主外键关系 */ create table category( cid int primary key auto_increment, cname varchar(32) ); #商品表 create table product( pid int primary key auto_increment, pname varchar(32), price int, category_id int ); /* 创建外键约束,外键约束外键约束，顾名思义就
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://loardforwin.github.io/2020/08/%E8%A1%A8%E7%9A%84%E5%85%B3%E7%B3%BB/" class="">
-  <time datetime="2020-08-04 14:01:03 &#43;0800 CST" itemprop="datePublished">2020-08-04</time>
-</a>
-</span>
-<span class="article-category">
-  <i class="icon icon-folder"></i>&nbsp;
-  <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/"> 学习 </a>
-</span>  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/"> 学习小结 </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2020/08/%E8%A1%A8%E7%9A%84%E5%85%B3%E7%B3%BB/#comments" class="article-comment-link">评论</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1290字</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 3分 </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2020/08/mysql%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"
-    >MySQL基础语法</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        1.创建表(create) /* 创建数据表: 关键字 create table 格式: create table 表名( 列名1 数据类型[长度] [约束], 列名2 数据类型[长度] [约束], 列名3 数据
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://loardforwin.github.io/2020/08/mysql%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" class="">
-  <time datetime="2020-08-03 18:13:21 &#43;0800 CST" itemprop="datePublished">2020-08-03</time>
-</a>
-</span>
-<span class="article-category">
-  <i class="icon icon-folder"></i>&nbsp;
-  <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/"> 学习 </a>
-</span>  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/%E9%9A%8F%E7%AC%94/"> 随笔 </a>
-    <a class="article-tag-link" href="/tags/%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/"> 学习小结 </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2020/08/mysql%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/#comments" class="article-comment-link">评论</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 5140字</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 11分 </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2020/08/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8Cnavicat%E5%BF%AB%E6%8D%B7%E8%AF%AD%E6%B3%95/"
-    >MySQL数据库和Navicat快捷语法</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        注意：[]表示内容可变 MySQL数据库相关命令 所有命令需要加分号（ ；） 创建数据库： create database [数据库名]; 删除数据库： drop database [数据库名]; 设置已存在
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://loardforwin.github.io/2020/08/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8Cnavicat%E5%BF%AB%E6%8D%B7%E8%AF%AD%E6%B3%95/" class="">
-  <time datetime="2020-08-03 10:33:40 &#43;0800 CST" itemprop="datePublished">2020-08-03</time>
-</a>
-</span>
-<span class="article-category">
-  <i class="icon icon-folder"></i>&nbsp;
-  <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/"> 学习 </a>
-</span>  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/%E9%9A%8F%E7%AC%94/"> 随笔 </a>
-    <a class="article-tag-link" href="/tags/%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/"> 学习小结 </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2020/08/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8Cnavicat%E5%BF%AB%E6%8D%B7%E8%AF%AD%E6%B3%95/#comments" class="article-comment-link">评论</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 340字</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1分 </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2020/08/%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E5%99%A8-classloader/"
-    >类的加载器ClassLoader</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        类的加载器 ClassLoader ——————运行class，加载到内存，方法区 加载器用IO流对象将class文件加载到内存 三个加载器都是CLassLoader的
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://loardforwin.github.io/2020/08/%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E5%99%A8-classloader/" class="">
-  <time datetime="2020-08-01 20:37:31 &#43;0800 CST" itemprop="datePublished">2020-08-01</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/"> 学习小结 </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2020/08/%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E5%99%A8-classloader/#comments" class="article-comment-link">评论</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 496字</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1分 </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2020/08/%E5%8F%8D%E5%B0%84/"
-    >反射</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">
-        反射（Reflect） 反射关键对象：class文件对象 类加载器创建，获取使用 三种方法： ​ 1：对象的方法getClass()获取（getCla
-      </div>
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://loardforwin.github.io/2020/08/%E5%8F%8D%E5%B0%84/" class="">
-  <time datetime="2020-08-01 20:35:57 &#43;0800 CST" itemprop="datePublished">2020-08-01</time>
-</a>
-</span>
-<span class="article-category">
-  <i class="icon icon-folder"></i>&nbsp;
-  <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/"> 学习 </a>
-</span>  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/%E9%9A%8F%E7%AC%94/"> 随笔 </a>
-    <a class="article-tag-link" href="/tags/%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/"> 学习小结 </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2020/08/%E5%8F%8D%E5%B0%84/#comments" class="article-comment-link">评论</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 608字</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2分 </span>
-      </p>
-    </article>
-    <article
-      class="article article-type-page"
-      itemscope
-      itemtype="http://schema.org/BlogPosting"
-    >
-      <div class="article-header">
-        <h1 itemprop="name">
-  <a
-    class="article-title"
-    href="/2020/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E5%8D%9A%E5%AE%A2%E5%91%BD%E4%BB%A4/"
-    >我的第一篇博客——博客相关命令</a
-  >
-</h1>
-
-      </div>
-      <div class="article-entry text-muted" itemprop="description">创建博客，博客的更新，创建博客的md文件以及相关命令</div>
-      
-      <p class="article-meta">
-<span class="article-date">
-  <i class="icon icon-calendar-check"></i>&nbsp;
-<a href="https://loardforwin.github.io/2020/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E5%8D%9A%E5%AE%A2%E5%91%BD%E4%BB%A4/" class="">
-  <time datetime="2020-07-30 15:09:03 &#43;0800 CST" itemprop="datePublished">2020-07-30</time>
-</a>
-</span>
-  
-  <span class="article-tag">
-    <i class="icon icon-tags"></i>&nbsp;
-    <a class="article-tag-link" href="/tags/hogo%E5%8D%9A%E5%AE%A2%E5%91%BD%E4%BB%A4/"> hogo博客命令 </a>
-  </span>
-
-        <span class="post-comment"><i class="icon icon-comment"></i> &nbsp;<a href="/2020/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E5%8D%9A%E5%AE%A2%E5%91%BD%E4%BB%A4/#comments" class="article-comment-link">评论</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 164字</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1分 </span>
-      </p>
-    </article></div>
-  
-<nav class="bar bar-footer clearfix" data-stick-bottom>
-  <div class="bar-inner">
-    <ul class="pager pull-left">
-    </ul>
-    <div class="total-article bar-right">
-      Page:1/1
     </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h2 id="多表查询新建数据库数据">多表查询新建数据库数据</h2>
+<pre><code class="language-sql">/*
+	多表查询 新建的数据库
+*/
+
+# 分类表
+
+CREATE TABLE category (
+  cid VARCHAR(32) PRIMARY KEY ,
+  cname VARCHAR(50)
+);
+
+#商品表
+CREATE TABLE products(
+  pid VARCHAR(32) PRIMARY KEY ,
+  pname VARCHAR(50),
+  price INT,
+  flag VARCHAR(2), #是否上架标记为：1表示上架、0表示下架
+  category_id VARCHAR(32),
+  CONSTRAINT products_category_fk FOREIGN KEY (category_id) REFERENCES category (cid)
+);
+#分类
+INSERT INTO category(cid,cname) VALUES('c001','家电');
+INSERT INTO category(cid,cname) VALUES('c002','服饰');
+INSERT INTO category(cid,cname) VALUES('c003','化妆品');
+#商品
+INSERT INTO products(pid, pname,price,flag,category_id) VALUES('p001','联想',5000,'1','c001');
+INSERT INTO products(pid, pname,price,flag,category_id) VALUES('p002','海尔',3000,'1','c001');
+INSERT INTO products(pid, pname,price,flag,category_id) VALUES('p003','雷神',5000,'1','c001');
+
+INSERT INTO products (pid, pname,price,flag,category_id) VALUES('p004','JACK JONES',800,'1','c002');
+INSERT INTO products (pid, pname,price,flag,category_id) VALUES('p005','真维斯',200,'1','c002');
+INSERT INTO products (pid, pname,price,flag,category_id) VALUES('p006','花花公子',440,'1','c002');
+INSERT INTO products (pid, pname,price,flag,category_id) VALUES('p007','劲霸',2000,'1','c002');
+
+INSERT INTO products (pid, pname,price,flag,category_id) VALUES('p008','香奈儿',800,'1','c003');
+INSERT INTO products (pid, pname,price,flag,category_id) VALUES('p009','相宜本草',200,'1','c003');
+
+/*
+	多表数据查询
+	同时查询分类和商品表
+	语法：
+		select 列名 from 表名1，表名2
+*/
+-- 查表生成的是笛卡尔积
+select * from category,products;
+</code></pre>
+<h3 id="随笔">随笔</h3>
+<ul>
+<li>
+<p>navicat中 utf8_general_ci选项是大小写不敏感的意思</p>
+</li>
+<li>
+<p>数据表主外键（约束）的添加是针对数据的插入而言的，<strong>为数据插入做的限定</strong></p>
+</li>
+<li>
+<p>但由select * from A，B可知会出现笛卡尔积(两表的乘积)的数据表，从而出现了多表查询的约束条件</p>
+<blockquote>
+<p>如下</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="heading"></h2>
+<h1 id="1内连接查询">1.内连接查询</h1>
+<h2 id="11隐式内连接">1.1隐式内连接</h2>
+<pre><code class="language-sql">/*
+	查询语法：
+		select 列名 from 表A，表B
+		where条件 主表的主键=从表的外键
+*/
+select * from category,products where cid=category_id;
+
+/*
+	加入，主表的主键和从表的外键的列名，相同
+	表名，列名
+*/
+select * from category,products where category.cid=products.category_id;
+
+/*
+	推荐：可以使用as重命名
+*/
+select * from category c,products p where c.cid=p.category_id;
+</code></pre>
+<h2 id="12显示内连接">1.2显示内连接</h2>
+<pre><code class="language-sql">/*
+	内链接：显示内连接
+	关键字 inner join
+	
+
+	条件过滤,关键字不用where 用 on
+
+*/
+select * from category c inner join products p on c.cid=p.category_id;
+
+/*
+	外链接查询：
+		左外：left outer join 参照点就是左边的表！！左表的数据必须都显示，右表数据没有，显示null
+		右外：right outer join 参照点就是右边的表！！右表的数据必须都显示，左表没有相关数据，则不能显示
+--一般主表写前面，从表写右边
+*/
+select * from category c left outer join products p on c.cid=p.category_id;
+select * from category c right outer join products p on c.cid=p.category_id;
+</code></pre>
+<h1 id="2子查询">2.子查询</h1>
+<pre><code class="language-sql">/*
+	子查询：
+		两个查询放在一起，一个是子，一个是父
+		
+
+		子查询的结果，可以让另一个查询来使用
+		可以作为条件，也可以作为另一个表
+
+*/
+-- 需求1：查询归属于化妆品的商品
+select * from products where category_id='c003';
+
+/*
+	分析：在分类表中，查询这个c003再使用
+*/
+select * from category where cname='化妆品';
+
+select * from products where category_id=(select cid from category where cname='化妆品');
+
+-- 需求2：查询归属于化妆品的商品
+select * from products p,(select * from category where cname='化妆品') c where p.category_id=c.cid;
+
+/*
+	使用子查询，同时查询出商品是服装和化妆品
+	查询的条件使用子查询来实现
+*/
+-- 原版
+select * from products where category_id ='c002' or category_id='c003';
+select * from category where cname='化妆品' or cname='服饰';
+-- 用子查询的版本
+select * from products where category_id in (select cid from category where cname='化妆品' or cname='服饰');
+</code></pre>
+<h1 id="3索引创建索引查看索引删除索引">3.索引(创建索引，查看索引，删除索引)</h1>
+<pre><code class="language-sql">/*
+	索引 index
+	海量数据的年代
+	MySQL数据库，查询数据的时候，全部数据到扫描，超出你要的数据
+	索引技术，提升查询效率
+	
+
+	MySQL数据的存储引擎：数据在硬盘的存储方式(文件 010101)
+	btree是索引类型
+		InnoDB(主流)：文件
+			支持事务
+			支持关系，主外键
+			数据增删改慢，查询一般
+		MYISAM：文件
+			不支持事务
+			不支持关系，主外键
+			数据增删改，快，查询一般
+		Memory：存储在内存中，关机，丢失
+		
+		1） 单值索引 ：即一个索引只包含单个列，一个表可以有多个单列索引
+	
+		2） 唯一索引 ：索引列的值必须唯一，但允许有空值
+				约束，唯一约束unique，自动创建索引
+	
+		3） 复合索引 ：即一个索引包含多个列
+
+*/
+-- 价格上创建索引
+create index index_price on products(price);
+-- 查看表中索引
+show index from products;
+-- 删除索引
+drop index index_price on products;
+</code></pre>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接: </strong>
+      <a href="https://loardforwin.github.io/2020/08/%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/" title="多表查询" target="_blank" rel="external">https://loardforwin.github.io/2020/08/%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/loardforwin" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://loardforwin.github.io/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/loardforwin" target="_blank"><span class="text-dark">Loardforwin</span><small class="ml-1x"></small></a></h3>
+        <div>life is fantastic~</div>
+      </div>
+    </figure>
   </div>
+</div>
+    </div>
+  </article>
+<section id="comments">
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://loardforwin.github.io/2020/08/%E8%A1%A8%E7%9A%84%E5%85%B3%E7%B3%BB/" title="表的关系"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="文章目录" role="button">
+                    <span>[&nbsp;</span><span>文章目录</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
+        </div>
+    </div>
 </nav>
 
 </main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -602,6 +600,22 @@
         
         hasInnerContainers: true,
     });
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: md5(location.pathname),
+        distractionFreeMode: true
+    });
+    gitalk.render('comments');
 </script>
 
   </body>
