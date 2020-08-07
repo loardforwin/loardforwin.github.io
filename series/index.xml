@@ -10,6 +10,33 @@
     
     
     <item>
+      <title>关于空格宽度和汉字宽度不匹配问题的解决方案</title>
+      <link>https://loardforwin.github.io/2020/08/%E5%85%B3%E4%BA%8E%E7%A9%BA%E6%A0%BC%E5%AE%BD%E5%BA%A6%E5%92%8C%E6%B1%89%E5%AD%97%E5%AE%BD%E5%BA%A6%E4%B8%8D%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Fri, 07 Aug 2020 23:25:26 +0800</pubDate>
+      
+      <guid>https://loardforwin.github.io/2020/08/%E5%85%B3%E4%BA%8E%E7%A9%BA%E6%A0%BC%E5%AE%BD%E5%BA%A6%E5%92%8C%E6%B1%89%E5%AD%97%E5%AE%BD%E5%BA%A6%E4%B8%8D%E5%8C%B9%E9%85%8D%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <description>名称 编号 描述 &amp;amp;nbsp; &amp;amp;#160; 不断行的空白(1个字符宽度) &amp;amp;ensp; &amp;amp;#8194; 半个空白(1个字符宽度) &amp;amp;emsp; &amp;amp;#8195; 一个空白(2个字符宽度) &amp;amp;thinsp; &amp;amp;#8201; 窄空白(小于1个字符宽度) 经过实践操</description>
+    </item>
+    
+    <item>
+      <title>IDEA快捷键</title>
+      <link>https://loardforwin.github.io/2020/08/idea%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Fri, 07 Aug 2020 18:48:21 +0800</pubDate>
+      
+      <guid>https://loardforwin.github.io/2020/08/idea%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>ALT+7：快速查看类中所有方法</description>
+    </item>
+    
+    <item>
+      <title>名词记录</title>
+      <link>https://loardforwin.github.io/2020/08/%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Fri, 07 Aug 2020 09:54:32 +0800</pubDate>
+      
+      <guid>https://loardforwin.github.io/2020/08/%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E8%AE%B0%E5%BD%95/</guid>
+      <description>web：World wide web 互联网总称</description>
+    </item>
+    
+    <item>
       <title>JDBC</title>
       <link>https://loardforwin.github.io/2020/08/jdbc/</link>
       <pubDate>Wed, 05 Aug 2020 09:36:26 +0800</pubDate>
