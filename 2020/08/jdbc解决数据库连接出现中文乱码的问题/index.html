@@ -2,7 +2,8 @@
 <html lang="zh">
   <head>
     <title>
-        Loardforwin&#39;s Technology Blog</title>
+        JDBC解决数据库连接出现中文乱码的问题 - Loardforwin&#39;s Technology Blog
+      </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -19,26 +20,33 @@
     <meta http-equiv="window-target" content="_top" />
     
     
-    
+    <meta name="description" content="随笔 连接池本质是容器集合，用就拿，用完归还到池中 三种连接池：DBCP(Apache的产品，快被抛弃了，不用),C3P0,Druid(阿里巴巴" />
     <meta name="generator" content="Hugo 0.74.3 with theme pure" />
-    <title>Loardforwin&#39;s Technology Blog</title>
+    <title>JDBC解决数据库连接出现中文乱码的问题 - Loardforwin&#39;s Technology Blog</title>
     
-    <link rel="alternate" type="application/rss+xml" href="https://loardforwin.github.io/tags/about/index.xml" title="Loardforwin's Technology Blog" />
     
     <link rel="stylesheet" href="https://loardforwin.github.io/css/style.min.c4bc7071f132c964c2116bca53b392933f377e5ca7b7051ed245187c621a2d3e.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="about" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://loardforwin.github.io/tags/about/" />
-<meta property="og:updated_time" content="2020-07-30T23:01:58+08:00" />
-<meta itemprop="name" content="about">
-<meta itemprop="description" content="">
+    <meta property="og:title" content="JDBC解决数据库连接出现中文乱码的问题" />
+<meta property="og:description" content="随笔 连接池本质是容器集合，用就拿，用完归还到池中 三种连接池：DBCP(Apache的产品，快被抛弃了，不用),C3P0,Druid(阿里巴巴" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://loardforwin.github.io/2020/08/jdbc%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E5%87%BA%E7%8E%B0%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/" />
+<meta property="article:published_time" content="2020-08-05T09:36:26+08:00" />
+<meta property="article:modified_time" content="2020-08-05T09:36:26+08:00" />
+<meta itemprop="name" content="JDBC解决数据库连接出现中文乱码的问题">
+<meta itemprop="description" content="随笔 连接池本质是容器集合，用就拿，用完归还到池中 三种连接池：DBCP(Apache的产品，快被抛弃了，不用),C3P0,Druid(阿里巴巴">
+<meta itemprop="datePublished" content="2020-08-05T09:36:26+08:00" />
+<meta itemprop="dateModified" content="2020-08-05T09:36:26+08:00" />
+<meta itemprop="wordCount" content="464">
+
+
+
+<meta itemprop="keywords" content="随笔,学习小结," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="about"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="JDBC解决数据库连接出现中文乱码的问题"/>
+<meta name="twitter:description" content="随笔 连接池本质是容器集合，用就拿，用完归还到池中 三种连接池：DBCP(Apache的产品，快被抛弃了，不用),C3P0,Druid(阿里巴巴"/>
 
     <!--[if lte IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -242,40 +250,166 @@
 
     
     
-<main class="main" role="main">
-    <article class="content article article-tags post-type-list" itemscope="">
-        <header class="article-header">
-            <h1 itemprop="name" class="hidden-xs">about</h1>
-            <p class="text-muted hidden-xs">共 4 个标签</p>
-            <nav role="navigation" id="nav-main" class="okayNav">
-                <ul>
-                    <li><a href="https://loardforwin.github.io/tags">All</a></li>
-                    <li><a href="https://loardforwin.github.io/tags/about/">about</a></li>
-                    <li><a href="https://loardforwin.github.io/tags/hogo%E5%8D%9A%E5%AE%A2%E5%91%BD%E4%BB%A4/">hogo博客命令</a></li>
-                    <li><a href="https://loardforwin.github.io/tags/%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/">学习小结</a></li>
-                    <li><a href="https://loardforwin.github.io/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
-                </ul>
-            </nav>
-        </header>
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">文章目录</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2020/08/jdbc%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E5%87%BA%E7%8E%B0%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/"
+    >JDBC解决数据库连接出现中文乱码的问题</a
+  >
+</h1>
+
+      <div class="article-meta">
         
-        <div class="article-body">
-            <div class="col-md-6"><article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-    <div class="panel-body">
-        <div class="article-meta">
-            <time datetime="2020-07-30 23:01:58 &#43;0800 CST"
-                itemprop="datePublished">2020-07-30</time>
-        </div>
-        <h3 class="article-title" itemprop="name">
-            <a class="article-link" href="https://loardforwin.github.io/about/">About</a>
-        </h3>
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://loardforwin.github.io/2020/08/jdbc%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E5%87%BA%E7%8E%B0%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/" class="article-date">
+  <time datetime="2020-08-05 09:36:26 &#43;0800 CST" itemprop="datePublished">2020-08-05</time>
+</a>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/"> 学习 </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/%E9%9A%8F%E7%AC%94/"> 随笔 </a>
+    <a class="article-tag-link" href="/tags/%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/"> 学习小结 </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/08/jdbc%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E5%87%BA%E7%8E%B0%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/#comments"
+            class="article-comment-link">评论</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 464字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1分 </span>
+      </div>
     </div>
-    <div class="panel-footer">
-        <a href="https://loardforwin.github.io/tags/about" class="label label-default mb">about</a>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <blockquote>
+<p><strong>随笔</strong></p>
+</blockquote>
+<p>连接池本质是容器集合，用就拿，用完归还到池中</p>
+<p>三种连接池：DBCP(Apache的产品，快被抛弃了，不用),C3P0,Druid(阿里巴巴做的性能最好)</p>
+<p><em><strong>sun公司做了一个连接池规范：接口DataSource</strong></em></p>
+<p>解决数据库连接出现中文乱码的问题：url数据库后加上**?characterEncoding=UTF-8**即可</p>
+<table>
+<thead>
+<tr>
+<th>表现层（view/web）</th>
+<th>业务层（service）</th>
+<th>持久层（dao）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>和用户交互，获取用户的数据将数据显示出来</td>
+<td>功能上的逻辑运算</td>
+<td>操作数据库</td>
+</tr>
+</tbody>
+</table>
+<h1 id="事务简笔">事务简笔</h1>
+<p>查看数据库隔离级别：select @@tx_isolation;</p>
+<p>MySQL开启事务：begin;</p>
+<p>提交事务：commit；</p>
+<p>回滚事务：rollback；</p>
+<p>隔离级别相关设置：</p>
+<pre><code class="language-sql">/*
+	设置MySQl隔离最低级别
+	read uncommitted 发生脏读
+	一个事务，看到了另一个没有提交情况
+	更改语句：set session transaction isolation level
+	使用的方法是在更改语句的后面添加 read uncommitted
+	
+	隔离级别设置到read committed 脏读不会出现
+	但是会出现重复读
+	
+	一个事务，看到了另一个事务已经提交的数据
+	
+	隔离级别设置到 repeatable read 脏读，重复读 看不到
+	可重复读：一个事务，看到了另一个事务已经提交的数据insert语句
+*/
+
+
+</code></pre>
+<p><a href="https://blog.csdn.net/yuxin6866/article/details/52649048">https://blog.csdn.net/yuxin6866/article/details/52649048</a></p>
+
     </div>
-</article>
-            </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接: </strong>
+      <a href="https://loardforwin.github.io/2020/08/jdbc%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E5%87%BA%E7%8E%B0%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/" title="JDBC解决数据库连接出现中文乱码的问题" target="_blank" rel="external">https://loardforwin.github.io/2020/08/jdbc%E8%A7%A3%E5%86%B3%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E5%87%BA%E7%8E%B0%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/loardforwin" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://loardforwin.github.io/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/loardforwin" target="_blank"><span class="text-dark">Loardforwin</span><small class="ml-1x"></small></a></h3>
+        <div>life is fantastic~</div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+<section id="comments">
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://loardforwin.github.io/2020/08/%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2/" title="多表查询"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
+            </li>
+            <li class="next">
+                <a href="https://loardforwin.github.io/2020/08/%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E8%AE%B0%E5%BD%95/"
+                    title="名词记录"><span>上一篇&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="文章目录" role="button">
+                    <span>[&nbsp;</span><span>文章目录</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
         </div>
-    </article>
+    </div>
+</nav>
+
 </main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 <ul class="social-links">
     <li><a href="https://github.com/loardforwin" target="_blank" title="github" data-toggle=tooltip data-placement=top >
@@ -348,6 +482,7 @@
         hasInnerContainers: true,
     });
 </script>
+
 
   </body>
 </html>
