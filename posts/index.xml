@@ -5,10 +5,37 @@
     <link>https://loardforwin.github.io/posts/</link>
     <description>Recent content in Posts on Loardforwin&#39;s Technology Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 10 Aug 2020 23:58:11 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2020 23:05:12 +0800</lastBuildDate>
     
         <atom:link href="https://loardforwin.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Jar包的使用范围</title>
+      <link>https://loardforwin.github.io/2020/08/jar%E5%8C%85%E7%9A%84%E4%BD%BF%E7%94%A8%E8%8C%83%E5%9B%B4/</link>
+      <pubDate>Thu, 13 Aug 2020 23:05:12 +0800</pubDate>
+      
+      <guid>https://loardforwin.github.io/2020/08/jar%E5%8C%85%E7%9A%84%E4%BD%BF%E7%94%A8%E8%8C%83%E5%9B%B4/</guid>
+      <description>c3p0-0.9.1.2.jar 用于数据库连接池 druid-1.1.6.jar 用于数据库连接池 lombok-1.18.8.jar 用于pojo对象的简化开发 mysql-connector-java-5.1.46.jar 用于数据库连接 commons-beanutils.jar 包含了一些Bean工具类,如BeanUtils commons-logging.jar 包含了日志</description>
+    </item>
+    
+    <item>
+      <title>一般分页数据的pojo对象内容</title>
+      <link>https://loardforwin.github.io/2020/08/%E4%B8%80%E8%88%AC%E5%88%86%E9%A1%B5%E6%95%B0%E6%8D%AE%E7%9A%84pojo%E5%AF%B9%E8%B1%A1%E5%86%85%E5%AE%B9/</link>
+      <pubDate>Thu, 13 Aug 2020 23:01:06 +0800</pubDate>
+      
+      <guid>https://loardforwin.github.io/2020/08/%E4%B8%80%E8%88%AC%E5%88%86%E9%A1%B5%E6%95%B0%E6%8D%AE%E7%9A%84pojo%E5%AF%B9%E8%B1%A1%E5%86%85%E5%AE%B9/</guid>
+      <description>一般分页数据的pojo对象内容 public class PageBean&amp;lt;T&amp;gt; { //总共页数 private int totalPage; //当前的第几页 private int currentPage; //每页显示的条数 private int pageSize; //总数据 private long totalCount; //查询当前页面的所有</description>
+    </item>
+    
+    <item>
+      <title>关于Jsp页面标签的小用法</title>
+      <link>https://loardforwin.github.io/2020/08/%E5%85%B3%E4%BA%8Ejsp%E9%A1%B5%E9%9D%A2%E6%A0%87%E7%AD%BE%E7%9A%84%E5%B0%8F%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Thu, 13 Aug 2020 22:50:10 +0800</pubDate>
+      
+      <guid>https://loardforwin.github.io/2020/08/%E5%85%B3%E4%BA%8Ejsp%E9%A1%B5%E9%9D%A2%E6%A0%87%E7%AD%BE%E7%9A%84%E5%B0%8F%E7%94%A8%E6%B3%95/</guid>
+      <description>获取客户端超链接的参数 在href=&amp;quot; &amp;quot;内容最后面加？operator=xxx 同过servlet里的request.get</description>
+    </item>
     
     <item>
       <title>中文乱码问题</title>
@@ -52,7 +79,7 @@
       <pubDate>Fri, 07 Aug 2020 09:54:32 +0800</pubDate>
       
       <guid>https://loardforwin.github.io/2020/08/%E7%9B%B8%E5%85%B3%E5%90%8D%E8%AF%8D%E8%AE%B0%E5%BD%95/</guid>
-      <description>web：World wide web 互联网总称</description>
+      <description>web：World wide web 互联网总称 JSTL(Jsp Standard Tag Library)：JSP标准库 使用时jsp页面头部的申明 &amp;lt;%@ taglib uri=&amp;quot;地址（一般是核心库co</description>
     </item>
     
     <item>

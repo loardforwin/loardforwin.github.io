@@ -2,7 +2,8 @@
 <html lang="zh">
   <head>
     <title>
-        Loardforwin&#39;s Technology Blog</title>
+        一般分页数据的pojo对象内容 - Loardforwin&#39;s Technology Blog
+      </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -19,26 +20,33 @@
     <meta http-equiv="window-target" content="_top" />
     
     
-    
+    <meta name="description" content="一般分页数据的pojo对象内容 public class PageBean&amp;lt;T&amp;gt; { //总共页数 private int totalPage; //当前的第几页 private int currentPage; //每页显示的条数 private int pageSize; //总数据 private long totalCount; //查询当前页面的所有" />
     <meta name="generator" content="Hugo 0.74.3 with theme pure" />
-    <title>Loardforwin&#39;s Technology Blog</title>
+    <title>一般分页数据的pojo对象内容 - Loardforwin&#39;s Technology Blog</title>
     
-    <link rel="alternate" type="application/rss+xml" href="https://loardforwin.github.io/tags/hogo%E5%8D%9A%E5%AE%A2%E5%91%BD%E4%BB%A4/index.xml" title="Loardforwin's Technology Blog" />
     
     <link rel="stylesheet" href="https://loardforwin.github.io/css/style.min.c4bc7071f132c964c2116bca53b392933f377e5ca7b7051ed245187c621a2d3e.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="hogo博客命令" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://loardforwin.github.io/tags/hogo%E5%8D%9A%E5%AE%A2%E5%91%BD%E4%BB%A4/" />
-<meta property="og:updated_time" content="2020-07-30T15:09:03+08:00" />
-<meta itemprop="name" content="hogo博客命令">
-<meta itemprop="description" content="">
+    <meta property="og:title" content="一般分页数据的pojo对象内容" />
+<meta property="og:description" content="一般分页数据的pojo对象内容 public class PageBean&lt;T&gt; { //总共页数 private int totalPage; //当前的第几页 private int currentPage; //每页显示的条数 private int pageSize; //总数据 private long totalCount; //查询当前页面的所有" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://loardforwin.github.io/2020/08/%E4%B8%80%E8%88%AC%E5%88%86%E9%A1%B5%E6%95%B0%E6%8D%AE%E7%9A%84pojo%E5%AF%B9%E8%B1%A1%E5%86%85%E5%AE%B9/" />
+<meta property="article:published_time" content="2020-08-13T23:01:06+08:00" />
+<meta property="article:modified_time" content="2020-08-13T23:01:06+08:00" />
+<meta itemprop="name" content="一般分页数据的pojo对象内容">
+<meta itemprop="description" content="一般分页数据的pojo对象内容 public class PageBean&lt;T&gt; { //总共页数 private int totalPage; //当前的第几页 private int currentPage; //每页显示的条数 private int pageSize; //总数据 private long totalCount; //查询当前页面的所有">
+<meta itemprop="datePublished" content="2020-08-13T23:01:06+08:00" />
+<meta itemprop="dateModified" content="2020-08-13T23:01:06+08:00" />
+<meta itemprop="wordCount" content="76">
+
+
+
+<meta itemprop="keywords" content="小结," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="hogo博客命令"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="一般分页数据的pojo对象内容"/>
+<meta name="twitter:description" content="一般分页数据的pojo对象内容 public class PageBean&lt;T&gt; { //总共页数 private int totalPage; //当前的第几页 private int currentPage; //每页显示的条数 private int pageSize; //总数据 private long totalCount; //查询当前页面的所有"/>
 
     <!--[if lte IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -247,41 +255,131 @@
 
     
     
-<main class="main" role="main">
-    <article class="content article article-tags post-type-list" itemscope="">
-        <header class="article-header">
-            <h1 itemprop="name" class="hidden-xs">hogo博客命令</h1>
-            <p class="text-muted hidden-xs">共 5 个标签</p>
-            <nav role="navigation" id="nav-main" class="okayNav">
-                <ul>
-                    <li><a href="https://loardforwin.github.io/tags">All</a></li>
-                    <li><a href="https://loardforwin.github.io/tags/about/">about</a></li>
-                    <li><a href="https://loardforwin.github.io/tags/hogo%E5%8D%9A%E5%AE%A2%E5%91%BD%E4%BB%A4/">hogo博客命令</a></li>
-                    <li><a href="https://loardforwin.github.io/tags/%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/">学习小结</a></li>
-                    <li><a href="https://loardforwin.github.io/tags/%E5%B0%8F%E7%BB%93/">小结</a></li>
-                    <li><a href="https://loardforwin.github.io/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
-                </ul>
-            </nav>
-        </header>
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">文章目录</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2020/08/%E4%B8%80%E8%88%AC%E5%88%86%E9%A1%B5%E6%95%B0%E6%8D%AE%E7%9A%84pojo%E5%AF%B9%E8%B1%A1%E5%86%85%E5%AE%B9/"
+    >一般分页数据的pojo对象内容</a
+  >
+</h1>
+
+      <div class="article-meta">
         
-        <div class="article-body">
-            <div class="col-md-6"><article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-    <div class="panel-body">
-        <div class="article-meta">
-            <time datetime="2020-07-30 15:09:03 &#43;0800 CST"
-                itemprop="datePublished">2020-07-30</time>
-        </div>
-        <h3 class="article-title" itemprop="name">
-            <a class="article-link" href="https://loardforwin.github.io/2020/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E5%8D%9A%E5%AE%A2%E5%91%BD%E4%BB%A4/">我的第一篇博客——博客相关命令</a>
-        </h3>
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://loardforwin.github.io/2020/08/%E4%B8%80%E8%88%AC%E5%88%86%E9%A1%B5%E6%95%B0%E6%8D%AE%E7%9A%84pojo%E5%AF%B9%E8%B1%A1%E5%86%85%E5%AE%B9/" class="article-date">
+  <time datetime="2020-08-13 23:01:06 &#43;0800 CST" itemprop="datePublished">2020-08-13</time>
+</a>
+</span>
+<span class="article-category">
+  <i class="icon icon-folder"></i>&nbsp;
+  <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/"> 学习小结 </a>
+</span>  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/%E5%B0%8F%E7%BB%93/"> 小结 </a>
+  </span>
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/08/%E4%B8%80%E8%88%AC%E5%88%86%E9%A1%B5%E6%95%B0%E6%8D%AE%E7%9A%84pojo%E5%AF%B9%E8%B1%A1%E5%86%85%E5%AE%B9/#comments"
+            class="article-comment-link">评论</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 76字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1分 </span>
+      </div>
     </div>
-    <div class="panel-footer">
-        <a href="https://loardforwin.github.io/tags/hogo%E5%8D%9A%E5%AE%A2%E5%91%BD%E4%BB%A4" class="label label-default mb">hogo博客命令</a>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      <h2 id="一般分页数据的pojo对象内容">一般分页数据的pojo对象内容</h2>
+<pre><code class="language-java">public class PageBean&lt;T&gt; {
+    //总共页数
+    private int totalPage;
+    //当前的第几页
+    private int currentPage;
+    //每页显示的条数
+    private int pageSize;
+    //总数据
+    private long totalCount;
+    //查询当前页面的所有数据
+    private List&lt;T&gt; list;
+}
+</code></pre>
+
     </div>
-</article>
-            </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接: </strong>
+      <a href="https://loardforwin.github.io/2020/08/%E4%B8%80%E8%88%AC%E5%88%86%E9%A1%B5%E6%95%B0%E6%8D%AE%E7%9A%84pojo%E5%AF%B9%E8%B1%A1%E5%86%85%E5%AE%B9/" title="一般分页数据的pojo对象内容" target="_blank" rel="external">https://loardforwin.github.io/2020/08/%E4%B8%80%E8%88%AC%E5%88%86%E9%A1%B5%E6%95%B0%E6%8D%AE%E7%9A%84pojo%E5%AF%B9%E8%B1%A1%E5%86%85%E5%AE%B9/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/loardforwin" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://loardforwin.github.io/avatar.png" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/loardforwin" target="_blank"><span class="text-dark">Loardforwin</span><small class="ml-1x"></small></a></h3>
+        <div>life is fantastic~</div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+<section id="comments">
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://loardforwin.github.io/2020/08/%E5%85%B3%E4%BA%8Ejsp%E9%A1%B5%E9%9D%A2%E6%A0%87%E7%AD%BE%E7%9A%84%E5%B0%8F%E7%94%A8%E6%B3%95/" title="关于Jsp页面标签的小用法"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
+            </li>
+            <li class="next">
+                <a href="https://loardforwin.github.io/2020/08/jar%E5%8C%85%E7%9A%84%E4%BD%BF%E7%94%A8%E8%8C%83%E5%9B%B4/"
+                    title="Jar包的使用范围"><span>上一篇&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="文章目录" role="button">
+                    <span>[&nbsp;</span><span>文章目录</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
+            <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter"
+                data-mobile-sites="weibo,qq,qzone"></div>
         </div>
-    </article>
+    </div>
+</nav>
+
 </main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 <ul class="social-links">
     <li><a href="https://github.com/loardforwin" target="_blank" title="github" data-toggle=tooltip data-placement=top >
@@ -354,6 +452,7 @@
         hasInnerContainers: true,
     });
 </script>
+
 
   </body>
 </html>
