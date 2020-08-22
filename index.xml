@@ -5,10 +5,28 @@
     <link>https://loardforwin.github.io/</link>
     <description>Recent content on Loardforwin&#39;s Technology Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 13 Aug 2020 23:05:12 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 20 Aug 2020 15:21:41 +0800</lastBuildDate>
     
         <atom:link href="https://loardforwin.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mybatis_dynamic</title>
+      <link>https://loardforwin.github.io/2020/08/mybatis_dynamic/</link>
+      <pubDate>Thu, 20 Aug 2020 15:21:41 +0800</pubDate>
+      
+      <guid>https://loardforwin.github.io/2020/08/mybatis_dynamic/</guid>
+      <description>批量删除，参数是数组 &amp;lt;!-- 批量删除，参数是数组 --&amp;gt; &amp;lt;delete id=&amp;quot;deleteUserByArray&amp;quot; parameterType=&amp;quot;int[]&amp;quot;&amp;gt; delete from user where id in &amp;lt;foreach collection=&amp;quot;array&amp;quot; open=&amp;quot;(&amp;quot; close=&amp;quot;)&amp;quot; separator=&amp;quot;,&amp;quot; item=&amp;quot;id&amp;quot;&amp;gt; #{id} &amp;lt;/foreach&amp;gt; &amp;lt;/delete&amp;gt; 批量删除，参数是集合 &amp;lt;!-- 批量删除，参数是集合 迭代标签 foreach 标签中的</description>
+    </item>
+    
+    <item>
+      <title>MyBatis一级，二级缓存</title>
+      <link>https://loardforwin.github.io/2020/08/mybatis%E4%B8%80%E7%BA%A7%E4%BA%8C%E7%BA%A7%E7%BC%93%E5%AD%98/</link>
+      <pubDate>Tue, 18 Aug 2020 12:09:21 +0800</pubDate>
+      
+      <guid>https://loardforwin.github.io/2020/08/mybatis%E4%B8%80%E7%BA%A7%E4%BA%8C%E7%BA%A7%E7%BC%93%E5%AD%98/</guid>
+      <description>MyBatis一级缓存 同一个SqlSession对象，执行的SQL语句相同，启用一级缓存，第一次查询结果(保存),再次查询，使用原来的结果 M</description>
+    </item>
     
     <item>
       <title>Jar包的使用范围</title>
