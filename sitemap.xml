@@ -4,27 +4,41 @@
   
   <url>
     <loc>https://loardforwin.github.io/</loc>
-    <lastmod>2020-08-20T15:21:41+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://loardforwin.github.io/2020/08/mybatis_dynamic/</loc>
-    <lastmod>2020-08-20T15:21:41+08:00</lastmod>
+    <lastmod>2020-09-03T15:49:24+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://loardforwin.github.io/posts/</loc>
-    <lastmod>2020-08-20T15:21:41+08:00</lastmod>
+    <lastmod>2020-09-03T15:49:24+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://loardforwin.github.io/2020/09/resourcebundle%E8%AF%BB%E5%8F%96properties%E7%B1%BB/</loc>
+    <lastmod>2020-09-03T15:49:24+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://loardforwin.github.io/tags/</loc>
+    <lastmod>2020-09-03T15:49:24+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://loardforwin.github.io/tags/%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/</loc>
+    <lastmod>2020-09-03T15:49:24+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://loardforwin.github.io/2020/08/mybatis_dynamic/</loc>
     <lastmod>2020-08-20T15:21:41+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -130,13 +144,6 @@
   
   <url>
     <loc>https://loardforwin.github.io/2020/08/jdbc%E9%9A%8F%E7%AC%94/</loc>
-    <lastmod>2020-08-05T09:36:26+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://loardforwin.github.io/tags/%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/</loc>
     <lastmod>2020-08-05T09:36:26+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

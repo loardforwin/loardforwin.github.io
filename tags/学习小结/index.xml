@@ -5,10 +5,19 @@
     <link>https://loardforwin.github.io/tags/%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/</link>
     <description>Recent content in 学习小结 on Loardforwin&#39;s Technology Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 05 Aug 2020 09:36:26 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2020 15:49:24 +0800</lastBuildDate>
     
         <atom:link href="https://loardforwin.github.io/tags/%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ResourceBundle读取properties类</title>
+      <link>https://loardforwin.github.io/2020/09/resourcebundle%E8%AF%BB%E5%8F%96properties%E7%B1%BB/</link>
+      <pubDate>Thu, 03 Sep 2020 15:49:24 +0800</pubDate>
+      
+      <guid>https://loardforwin.github.io/2020/09/resourcebundle%E8%AF%BB%E5%8F%96properties%E7%B1%BB/</guid>
+      <description>java.util.ResourceBundle类 public class ResourceBundleDemo { public static void main(String[] args) { ResourceBundle bundle = ResourceBundle.getBundle(&amp;quot;p</description>
+    </item>
     
     <item>
       <title>Mybatis_dynamic</title>
