@@ -5,10 +5,19 @@
     <link>https://loardforwin.github.io/posts/</link>
     <description>Recent content in Posts on Loardforwin&#39;s Technology Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 24 Sep 2020 18:00:13 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2020 16:37:12 +0800</lastBuildDate>
     
         <atom:link href="https://loardforwin.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Idea中连接mysql报错</title>
+      <link>https://loardforwin.github.io/2020/09/idea%E8%BF%9E%E6%8E%A5mysql%E6%8A%A5%E9%94%99/</link>
+      <pubDate>Tue, 29 Sep 2020 16:37:12 +0800</pubDate>
+      
+      <guid>https://loardforwin.github.io/2020/09/idea%E8%BF%9E%E6%8E%A5mysql%E6%8A%A5%E9%94%99/</guid>
+      <description>idae中连接mysql报错的解决方法 报错内容 Server returns invalid timezone. Need to set &amp;lsquo;serverTimezone&amp;rsquo; property. 解决方法 将连接界面的Advanced里的serverTimezone栏的va</description>
+    </item>
     
     <item>
       <title>提交表单不能和事件绑定一起触发的问题</title>
@@ -179,15 +188,6 @@
       
       <guid>https://loardforwin.github.io/2020/08/%E5%8F%8D%E5%B0%84/</guid>
       <description>反射（Reflect） 反射关键对象：class文件对象 类加载器创建，获取使用 三种方法： ​ 1：对象的方法getClass()获取（getCla</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://loardforwin.github.io/about/</link>
-      <pubDate>Thu, 30 Jul 2020 23:01:58 +0800</pubDate>
-      
-      <guid>https://loardforwin.github.io/about/</guid>
-      <description>为了博客的美观只好将博客主界面的作者信息给抹去了orz 这里补充相关信息： 主题名：pure(hugo 的主题) 作者：xiaoheiAh 作者git</description>
     </item>
     
   </channel>

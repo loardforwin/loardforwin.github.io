@@ -5,10 +5,19 @@
     <link>https://loardforwin.github.io/posts/</link>
     <description>Recent content in Posts on Loardforwin&#39;s Technology Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 24 Sep 2020 18:00:13 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 29 Sep 2020 16:37:12 +0800</lastBuildDate>
     
         <atom:link href="https://loardforwin.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About</title>
+      <link>https://loardforwin.github.io/about/</link>
+      <pubDate>Thu, 30 Jul 2020 23:01:58 +0800</pubDate>
+      
+      <guid>https://loardforwin.github.io/about/</guid>
+      <description>为了博客的美观只好将博客主界面的作者信息给抹去了orz 这里补充相关信息： 主题名：pure(hugo 的主题) 作者：xiaoheiAh 作者git</description>
+    </item>
     
     <item>
       <title>我的第一篇博客——博客相关命令</title>
