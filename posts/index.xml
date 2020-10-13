@@ -5,10 +5,19 @@
     <link>https://loardforwin.github.io/posts/</link>
     <description>Recent content in Posts on Loardforwin&#39;s Technology Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 29 Sep 2020 16:37:12 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2020 22:20:40 +0800</lastBuildDate>
     
         <atom:link href="https://loardforwin.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>实例化bean的三种方式</title>
+      <link>https://loardforwin.github.io/2020/10/%E5%AE%9E%E4%BE%8B%E5%8C%96bean%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Tue, 13 Oct 2020 22:20:40 +0800</pubDate>
+      
+      <guid>https://loardforwin.github.io/2020/10/%E5%AE%9E%E4%BE%8B%E5%8C%96bean%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F/</guid>
+      <description>实例化bean的三种方式 方式1: Spring 使用默认无参构造函数(掌握) 在默认情况下, Spring会根据默认无参构造函数来创建类对象。如果 bean 中没有默认</description>
+    </item>
     
     <item>
       <title>Idea中连接mysql报错</title>
@@ -179,15 +188,6 @@
       
       <guid>https://loardforwin.github.io/2020/08/%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E5%99%A8-classloader/</guid>
       <description>类的加载器 ClassLoader ——————运行class，加载到内存，方法区 加载器用IO流对象将class文件加载到内存 三个加载器都是CLassLoader的</description>
-    </item>
-    
-    <item>
-      <title>反射</title>
-      <link>https://loardforwin.github.io/2020/08/%E5%8F%8D%E5%B0%84/</link>
-      <pubDate>Sat, 01 Aug 2020 20:35:57 +0800</pubDate>
-      
-      <guid>https://loardforwin.github.io/2020/08/%E5%8F%8D%E5%B0%84/</guid>
-      <description>反射（Reflect） 反射关键对象：class文件对象 类加载器创建，获取使用 三种方法： ​ 1：对象的方法getClass()获取（getCla</description>
     </item>
     
   </channel>

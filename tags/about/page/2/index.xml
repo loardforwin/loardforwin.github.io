@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>反射</title>
+      <link>https://loardforwin.github.io/2020/08/%E5%8F%8D%E5%B0%84/</link>
+      <pubDate>Sat, 01 Aug 2020 20:35:57 +0800</pubDate>
+      
+      <guid>https://loardforwin.github.io/2020/08/%E5%8F%8D%E5%B0%84/</guid>
+      <description>反射（Reflect） 反射关键对象：class文件对象 类加载器创建，获取使用 三种方法： ​ 1：对象的方法getClass()获取（getCla</description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>https://loardforwin.github.io/about/</link>
       <pubDate>Thu, 30 Jul 2020 23:01:58 +0800</pubDate>
