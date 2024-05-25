@@ -5,10 +5,19 @@
     <link>https://loardforwin.github.io/tags/</link>
     <description>Recent content in Tags on Loardforwin&#39;s Technology Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 13 Oct 2020 22:20:40 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 25 May 2024 22:22:29 +0800</lastBuildDate>
     
         <atom:link href="https://loardforwin.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>如何手搓系统U盘</title>
+      <link>https://loardforwin.github.io/2024/05/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E7%B3%BB%E7%BB%9Fu%E7%9B%98/</link>
+      <pubDate>Sat, 25 May 2024 22:22:29 +0800</pubDate>
+      
+      <guid>https://loardforwin.github.io/2024/05/%E5%A6%82%E4%BD%95%E6%89%8B%E6%90%93%E7%B3%BB%E7%BB%9Fu%E7%9B%98/</guid>
+      <description>如何手搓系统盘 1.首先得在windows官网下载windows11镜像。 2.然后下载rufus软件（这是一个将U盘变成系统盘的软件）。{这里</description>
+    </item>
     
     <item>
       <title>实例化bean的三种方式</title>
@@ -88,7 +97,7 @@
       <pubDate>Thu, 13 Aug 2020 22:50:10 +0800</pubDate>
       
       <guid>https://loardforwin.github.io/2020/08/%E5%85%B3%E4%BA%8Ejsp%E9%A1%B5%E9%9D%A2%E6%A0%87%E7%AD%BE%E7%9A%84%E5%B0%8F%E7%94%A8%E6%B3%95/</guid>
-      <description>获取客户端超链接的参数 在href=&amp;quot; &amp;quot;内容最后面加？operator=xxx 同过servlet里的request.get</description>
+      <description>获取客户端超链接的参数 在href=&amp;quot; &amp;quot;内容最后面加？operator=xxx 通过servlet里的request.get</description>
     </item>
     
     <item>
@@ -179,15 +188,6 @@
       
       <guid>https://loardforwin.github.io/2020/08/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8Cnavicat%E5%BF%AB%E6%8D%B7%E8%AF%AD%E6%B3%95/</guid>
       <description>注意：[]表示内容可变 MySQL数据库相关命令 所有命令需要加分号（ ；） 创建数据库： create database [数据库名]; 删除数据库： drop database [数据库名]; 设置已存在</description>
-    </item>
-    
-    <item>
-      <title>类的加载器ClassLoader</title>
-      <link>https://loardforwin.github.io/2020/08/%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E5%99%A8-classloader/</link>
-      <pubDate>Sat, 01 Aug 2020 20:37:31 +0800</pubDate>
-      
-      <guid>https://loardforwin.github.io/2020/08/%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%E5%99%A8-classloader/</guid>
-      <description>类的加载器 ClassLoader ——————运行class，加载到内存，方法区 加载器用IO流对象将class文件加载到内存 三个加载器都是CLassLoader的</description>
     </item>
     
   </channel>
